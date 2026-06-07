@@ -79,12 +79,12 @@ export default function ListaDenuncias() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Denúncias</Text>
+      <Text style={styles.title}>Chamados</Text>
 
       <View style={styles.searchContainer}>
                         <TextInput
                             style={styles.searchInput}
-                            placeholder="🔍 comunicante, agente violador ou motivo..."
+                            placeholder="🔍 Nome do cliente"
                             value={searchText}
                             onChangeText={setSearchText}
                         />
@@ -92,7 +92,7 @@ export default function ListaDenuncias() {
         
                     {denuncia.length === 0 && !searchText ? (
                         <View style={styles.emptyContainer}>
-                            <Text style={styles.emptyText}>Nenhuma denúncia registrada ainda.</Text>
+                            <Text style={styles.emptyText}>Nenhum chamado registrado ainda.</Text>
                             <Text>Clique no botão acima para começar!</Text>
                         </View>
                     ) : (

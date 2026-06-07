@@ -149,7 +149,7 @@ if (dateObj > hoje) {
 
     try {
       const docRef = await addDoc(collection(db, "denuncia"), novadenuncia);
-      Alert.alert("Sucesso!", `denúncia salva com ID: ${docRef.id}`);
+      Alert.alert("Sucesso!", `chamado salvo com ID: ${docRef.id}`);
       
       // Limpar formulário
       setComunicante('');
@@ -187,27 +187,20 @@ if (dateObj > hoje) {
       keyboardVerticalOffset={Platform.OS === "ios" ? 60 : 20}
     >
       <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
-        <Text style={styles.header}>Nova Denúncia</Text>
+        <Text style={styles.header}>Novo Chamado</Text>
         
-        <Text style={styles.label}>Comunicante *</Text>
+        <Text style={styles.label}>Nome *</Text>
         <TextInput style={styles.input} value={comunicante} onChangeText={setComunicante} placeholder="" />
         
-        <Text style={styles.label}>Canal do Comunicante *</Text>
+        <Text style={styles.label}>Email *</Text>
         <TextInput style={styles.input} value={canalcomunicado} onChangeText={setCanalComunicado} placeholder="" />
-        <Text style={styles.label}>Agente Violador *</Text>
+        <Text style={styles.label}>Empresa *</Text>
         <TextInput style={styles.input} value={agenteviolador} onChangeText={setAgenteViolador} placeholder="" />
+        <Text style={styles.label}>Número do Anydesk *</Text>
+        <TextInput style={styles.input} value={endereco} onChangeText={setEndereco} placeholder="" />
         
-        <Text style={styles.label}>Data da ocorrência*</Text>
-        <TextInput 
-          style={styles.input} 
-          value={dataNascimentoTexto} 
-          onChangeText={handleDateChange}
-          placeholder="DD/MM/AAAA" 
-          keyboardType="numeric" 
-          maxLength={10}
-          autoCorrect={false}
-          autoCapitalize="none"
-        />
+        
+        
         
         
         <Text style={styles.label}>Telefone</Text>
@@ -219,16 +212,9 @@ if (dateObj > hoje) {
           keyboardType="phone-pad" 
           maxLength={15} 
         />
-        <Text style={styles.label}>Endereço da ocorrência</Text>
-                    <TextInput
-                        style={styles.input}
-                        value={endereco}
-                        onChangeText={setEndereco}
-                        placeholder="Endereço completo"
-                        multiline
-                    />
+       
         
-        <Text style={styles.label}>Relato do Comunicante *</Text>
+        <Text style={styles.label}>Descrição do Problema *</Text>
         <TextInput 
           style={styles.inputArea} 
           value={motivo} 
@@ -237,7 +223,7 @@ if (dateObj > hoje) {
           multiline 
         />
         
-        <Button title="Salvar Denúncia" onPress={handleSubmit} color="#28a745" />
+        <Button title="Salvar Chamado" onPress={handleSubmit} color="#28a745" />
         <View style={{ height: 100 }} />
       </ScrollView>
     </KeyboardAvoidingView>

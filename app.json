@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AppConselhoTutelarRN_Novo",
-    "slug": "AppConselhoTutelarRN_Novo",
+    "name": "Registro de Chamados",
+    "slug": "Registro de Chamados",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

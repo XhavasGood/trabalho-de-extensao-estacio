@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # App Conselho Tutelar
 
 Aplicativo mobile desenvolvido para auxiliar o **Conselho Tutelar** no registro, acompanhamento e gerenciamento de atendimentos e denúncias de violação de direitos de crianças e adolescentes.
@@ -112,3 +113,7 @@ app/
 **Instituição**: Estácio  
 **Projeto de Extensão**: Desenvolvimento de aplicativo para suporte ao Conselho Tutelar no registro e acompanhamento de violações de direitos de crianças e adolescentes.
 
+=======
+# trabalho-de-extensao-estacio
+aplicativo de chamados
+>>>>>>> dc14a289b5bf1897937ff813dac62b14d7f2f0c7

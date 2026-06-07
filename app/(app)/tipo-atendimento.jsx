@@ -7,26 +7,14 @@ export default function TipoAtendimentoScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Qual o tipo de atendimento?</Text>
       
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Violação de Direitos de Criança/Adolescente"
-          onPress={() => router.push('/adicionar')}
-          color="#4b0afdff"
-        />
-      </View>
+      
+      
       
       <View style={styles.buttonContainer}>
         <Button
-          title="Atendimento Diverso"
-          onPress={() => router.push('/adicionar-diverso')}
-          color="#bdc007ff"
-        />
-      </View>
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Denúncia"
+          title="Chamados"
           onPress={() => router.push('/adicionar-denuncia')}
-          color="#d10707ff"
+          color="rgb(0, 26, 255)"
         />
       </View>
 

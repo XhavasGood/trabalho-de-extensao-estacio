@@ -61,7 +61,7 @@ export default function DetalhesdenunciaScreen() {
         dataAtualizacao: Timestamp.now(),
       });
 
-      Alert.alert('Sucesso', 'denúncia atualizado!');
+      Alert.alert('Sucesso', 'chamado atualizado!');
       setIsEditing(false);
       fetchDenuncia(); // recarrega os dados
     } catch (error) {
@@ -73,7 +73,7 @@ export default function DetalhesdenunciaScreen() {
   const excluirDenuncia = () => {
     Alert.alert(
       'Confirmar exclusão',
-      'Tem certeza que deseja excluir esta denúncia? Essa ação não pode ser desfeita.',
+      'Tem certeza que deseja excluir este chamado? Essa ação não pode ser desfeita.',
       [
         { text: 'Cancelar', style: 'cancel' },
         {
@@ -83,11 +83,11 @@ export default function DetalhesdenunciaScreen() {
             try {
               const docRef = doc(db, 'denuncia', id);
               await deleteDoc(docRef);
-              Alert.alert('Sucesso', 'denúncia excluída!');
+              Alert.alert('Sucesso', 'chamado excluído!');
               router.back(); // volta para a lista
             } catch (error) {
               console.error('Erro ao excluir:', error);
-              Alert.alert('Erro', 'Não foi possível excluir a denúncia.');
+              Alert.alert('Erro', 'Não foi possível excluir o chamado.');
             }
           },
         },
@@ -201,12 +201,12 @@ export default function DetalhesdenunciaScreen() {
   keyboardShouldPersistTaps="handled"
 >
         <Text style={styles.title}>
-          {isEditing ? 'Editar denuncia' : 'Detalhes da denúncia'}
+          {isEditing ? 'Editar denuncia' : 'Detalhes do chamado'}
         </Text>
 
         {/* Campos - modo visualização ou edição */}
         <View style={styles.section}>
-          <Text style={styles.label}>Comunicante:</Text>
+          <Text style={styles.label}>Nome:</Text>
           {isEditing ? (
             <TextInput
               style={styles.input}
@@ -220,7 +220,7 @@ export default function DetalhesdenunciaScreen() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.label}>Canal do comunicado:</Text>
+          <Text style={styles.label}>Email:</Text>
           {isEditing ? (
             <TextInput
               style={styles.input}
@@ -234,7 +234,7 @@ export default function DetalhesdenunciaScreen() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.label}>Agente violador:</Text>
+          <Text style={styles.label}>Empresa:</Text>
           {isEditing ? (
             <TextInput
               style={styles.input}
@@ -248,38 +248,16 @@ export default function DetalhesdenunciaScreen() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.label}>Data da ocorrência:</Text>
+          <Text style={styles.label}>Número do Anydesk:</Text>
           {isEditing ? (
-            <>
-              <TextInput
-                style={styles.input}
-                value={dataNascimentoTextoEdit}
-                onChangeText={(text) => {
-                  // Reutilize ou crie handleDateChangeEdit se quiser máscara
-                  let clean = text.replace(/\D/g, '').slice(0, 8);
-                  let formatted = clean;
-                  if (clean.length > 2) formatted = clean.slice(0,2) + '/' + clean.slice(2);
-                  if (clean.length > 4) formatted = clean.slice(0,2) + '/' + clean.slice(2,4) + '/' + clean.slice(4);
-                  setDataNascimentoTextoEdit(formatted);
-
-                  if (clean.length === 8) {
-                    const d = parseInt(clean.slice(0,2), 10);
-                    const m = parseInt(clean.slice(2,4), 10);
-                    const y = parseInt(clean.slice(4,8), 10);
-                    const date = new Date(y, m-1, d);
-                    if (!isNaN(date.getTime()) && date <= new Date()) {
-                      setDataNascimentoEdit(date);
-                    }
-                  }
-                }}
-                placeholder="DD/MM/AAAA"
-                keyboardType="numeric"
-                maxLength={10}
-              />
-              
-            </>
+            <TextInput
+              style={styles.input}
+              value={enderecoEdit}
+              onChangeText={setEnderecoEdit}
+              placeholder=""
+            />
           ) : (
-            <Text style={styles.value}>{denuncia.dataNascimento || 'Não informado'}</Text>
+            <Text style={styles.value}>{denuncia.endereco || 'Não informado'}</Text>
           )}
         </View>
 
@@ -299,22 +277,10 @@ export default function DetalhesdenunciaScreen() {
             <Text style={styles.value}>{denuncia.telefone || 'Não informado'}</Text>
           )}
         </View>
-        <View style={styles.section}>
-        <Text style={styles.label}>Endereço:</Text>
-        {isEditing ? (
-                <TextInput 
-                style={styles.input} 
-                value={enderecoEdit} 
-                onChangeText={setEnderecoEdit}
-                multiline
-                />
-                ) : (
-                <Text style={styles.value}>{denuncia.endereco || 'Não informado'}</Text>
-                )}
-                </View>
+       
 
         <View style={styles.section}>
-          <Text style={styles.label}>Relato do comunicante:</Text>
+          <Text style={styles.label}>Descrição do Problema:</Text>
           {isEditing ? (
             <TextInput
               style={[styles.input, { height: 100, textAlignVertical: 'top' }]}

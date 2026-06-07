@@ -127,23 +127,19 @@ export default function HomeScreen() {
         
         <View style={styles.fullContainer}>
 
-            <Text style={styles.header}>Painel de Atendimentos</Text>
+            <Text style={styles.header}>Painel de Chamados</Text>
 
             <View style={styles.buttonContainer}>
                 <Link href="/tipo-atendimento" asChild>
-                    <Button title="➕ Registrar Novo Atendimento/denúncia" color="#28a745" />
+                    <Button title="➕ Registrar Novo Chamado" color="#28a745" />
                 </Link>
             </View>
 
-            <View style={styles.buttonContainer}>
-            <Button title="📋 Ver Atendimentos de violação de direitos" onPress={() => router.push('/busca-atendimentos')} color="#4b0afdff" />
-            </View>
+           
 
+            
             <View style={styles.buttonContainer}>
-            <Button title="📋 Ver Atendimentos Diversos" onPress={() => router.push('/lista-diversos')} color="#bdc007ff" />
-            </View>
-            <View style={styles.buttonContainer}>
-            <Button title="📋 Ver Denúncias" onPress={() => router.push('/lista-denuncias')} color="#d10707ff" />
+            <Button title="📋 Ver Chamados" onPress={() => router.push('/lista-denuncias')} color="rgb(0, 26, 255)" />
             </View>
             
 
