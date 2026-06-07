@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# App Conselho Tutelar
+# App Conselho Tutelar.
 
 Aplicativo mobile desenvolvido para auxiliar o **Conselho Tutelar** no registro, acompanhamento e gerenciamento de atendimentos e denúncias de violação de direitos de crianças e adolescentes.
 
