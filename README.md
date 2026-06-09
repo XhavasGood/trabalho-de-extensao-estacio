@@ -24,7 +24,7 @@ Aplicativo mobile desenvolvido para auxiliar o **algumas empresas com quem traba
 1. Clone o repositório:
    ```bash
    git clone https://github.com/XhavasGood/trabalho-de-extensao-estacio.git
-   trocar para o diretorio: cd Chamado
+   trocar para o diretorio: cd trabalho-de-extensao-estacio
    ```
 
 2. Instale as dependências (use esta flag para evitar conflitos de versões):
