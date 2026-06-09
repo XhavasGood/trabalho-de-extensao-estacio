@@ -79,21 +79,16 @@ app/
 └── (app)/                          → Grupo de telas protegidas (só acessíveis após login)
     ├── _layout.jsx                 → Layout das telas protegidas (estilização global)
     ├── index.jsx                   → Home protegida (lista de atendimentos principais)
-    ├── adicionar.jsx               → Novo atendimento de violação de direitos
-    ├── [id].jsx                    → Detalhes e edição de atendimentos de violação de direitos
-    ├── busca-atendimentos.jsx      → Consulta e busca de atendimentos de violação de direitos
-    ├── novo-acompanhamento.jsx     → registro de novo acompanhamento para o atendimento de violação de direitos (sub-registro de histórico)
+    ├── adicionar.jsx               → Novo atendimento 
+    ├── [id].jsx                    → Detalhes e edição de atendimentos
+    ├── busca-atendimentos.jsx      → Consulta e busca de atendimentos
+    ├── novo-acompanhamento.jsx     → registro de novo acompanhamento
     ├── tipo-atendimento.jsx        → Seleção do tipo de atendimento a iniciar
     ├── adicionar-diverso.jsx       → Novo atendimento diverso
     ├── diversos-atendimentos.jsx   → Lista de atendimentos diversos
     ├── diverso/
     │   ├── _layout.jsx             → Layout específico da seção de diversos
     │   └── [id].jsx                → Detalhes e edição de atendimentos diversos
-    ├── adicionar-denuncia.jsx      → Nova denúncia
-    ├── lista-denuncias.jsx         → Lista e busca de denúncias
-    ├── denuncia/
-    │   ├── _layout.jsx             → Layout específico da seção de denúncias
-    │   └── [id].jsx                → Detalhes e edição de denúncias
 ```
 
 ## Funcionalidades Principais
