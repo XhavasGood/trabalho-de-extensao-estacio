@@ -1,8 +1,7 @@
 <<<<<<< HEAD
-# App Conselho Tutelar.
+# App De atendimento Chamados
 
-Aplicativo mobile desenvolvido para auxiliar o **Conselho Tutelar** no registro, acompanhamento e gerenciamento de atendimentos e denúncias de violação de direitos de crianças e adolescentes.
-
+Aplicativo mobile desenvolvido para auxiliar o **algumas empresas com quem trabalhos** no registro, acompanhamento e gerenciamento de atendimentos de serviços relacionados a Manutenção e suporte N1,N2 E N3 da rede
 ## Tecnologias Utilizadas
 
 - **React Native** + **Expo** (SDK 54) – Desenvolvimento mobile cross-platform
@@ -101,17 +100,17 @@ app/
 
 - Autenticação segura com email e senha (Firebase Auth)
 - Registro, edição, exclusão e consulta de atendimentos (Firestore)
-- Cadastro de atendimentos diversos e denúncias
+- Cadastro de atendimentos.
 - Histórico de acompanhamento por atendimento
-- Busca por nome, CPF, motivo, etc.
+- Busca por nome.
 - Navegação protegida (telas só acessíveis logado)
 
 ## Trabalho de Extensão
 
-**Aluno**: Gean Lucas Alves Rodrigues  
+**Aluno**: Krystian de arruda monteiro
 **Curso**: Análise e Desenvolvimento de Sistemas  
 **Instituição**: Estácio  
-**Projeto de Extensão**: Desenvolvimento de aplicativo para suporte ao Conselho Tutelar no registro e acompanhamento de violações de direitos de crianças e adolescentes.
+**Projeto de Extensão**: Desenvolvimento de aplicativo para suporte de chamados para varias empresas
 
 =======
 # trabalho-de-extensao-estacio
